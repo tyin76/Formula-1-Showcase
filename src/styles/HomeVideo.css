@@ -1,0 +1,45 @@
+@font-face {
+    font-family: F1-black;
+    src: url(../fonts/Formula1-Black.ttf);
+}
+
+@font-face {
+    font-family: F1-bold;
+    src: url(../fonts/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: F1-regular;
+    src: url(../fonts/Formula1-Regular.ttf);
+}
+
+@font-face {
+    font-family: F1-wide;
+    src: url(../fonts/Formula1-Wide.ttf);
+}
+
+.home-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+  }
+
+.mute-button {
+    position:relative;
+    left:46%;
+    bottom: 47%;
+    
+}
+  
+.home-container video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }

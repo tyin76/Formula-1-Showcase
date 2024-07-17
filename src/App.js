@@ -1,7 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'; 
+import Home from './pages/Home.js';
+
 
 
 
@@ -11,7 +12,8 @@ function App() {
       <BrowserRouter>
       <Navbar />
         <Routes>
-          <Route path='/' exact/>
+          <Route path='/' exact Component={Home}/>
+          
 
 
           
