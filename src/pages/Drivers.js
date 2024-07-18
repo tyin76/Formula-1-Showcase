@@ -4,7 +4,8 @@ import Driver from '../components/Driver'
 function Drivers() {
   return (
     <div>
-        <Driver></Driver>
+        <Driver driverId={4665}></Driver>
+        {/* <Driver driverId={5579} /> */}
     </div>
   )
 }

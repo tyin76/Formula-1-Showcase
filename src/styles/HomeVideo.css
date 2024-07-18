@@ -31,8 +31,9 @@
 
 .mute-button {
     position:relative;
-    left:46%;
-    bottom: 47%;
+    left: 46.5%;
+    bottom: 57%;
+
     
 }
   
@@ -43,3 +44,19 @@
     position: fixed;
     z-index: -1;
   }
+
+
+.home-container > .title-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.title-header {
+    font-family: F1-wide;
+    color: rgb(161, 33, 33);
+    position: absolute;
+    top: -32%; 
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw; 
+}
