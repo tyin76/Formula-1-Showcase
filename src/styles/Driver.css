@@ -18,21 +18,6 @@
     src: url(../fonts/Formula1-Wide.ttf);
 }
 
-
-
-
-/* .driver-img {
-    width: 220px;
-
-}
-.driver-stats {
-    font-family: F1-regular;
-    font-size: 1.5vw;
-
-
-} */
-
-
 .card-container {
     display: flex;
     flex-direction: column;
@@ -42,6 +27,15 @@
     border-right: 2px solid black;
     border-radius: 10px;
     width: 300px; /* Adjust width as needed */
+    position: relative;
+}
+
+.team-logo {
+    position: absolute;
+    top: 0.5px; 
+    right: 15px; 
+    width: 70px; 
+    height: auto;
 }
 
 .driver-img {
@@ -86,9 +80,17 @@
     border-right: 2px solid rgb(255, 128, 0);
 }
 
+.mclaren > .team-logo {
+    top: 20px;
+}
+
 .ferrari {
     border-top: 2px solid rgb(239, 26, 45);
     border-right: 2px solid rgb(239, 26, 45);
+}
+
+.ferrari > .team-logo {
+    top: 10px;
 }
 
 .mercedes {
@@ -99,6 +101,11 @@
 .aston {
     border-top: 2px solid rgb(10, 121, 104);
     border-right: 2px solid rgb(10, 121, 104);
+}
+
+.aston > .team-logo {
+    top: 22px;
+    right: 20px;
 }
 
 .haas {

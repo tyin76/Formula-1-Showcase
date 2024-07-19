@@ -22,6 +22,7 @@ import Ocon from '../images/ocon.png'
 import Zhou from '../images/zhou.png'
 import Sargeant from '../images/sargeant.png'
 import Bottas from '../images/Bottas.png'
+import { Link } from 'react-router-dom';
 
 import '../styles/Driver.css'
 import { containerClasses } from '@mui/material';
@@ -204,22 +205,26 @@ console.log(data)
     }
 
     function styleDriverCard() {
-        return (
+         return ( 
+             
         <div className={`card-container ${driverBorder}`}>
 
         <b className='driver-name'>{name}</b>
         <img src={flag} alt='driver flag' className='driver-flag'></img>
+        <img src={logo} alt='team-logo' className='team-logo'></img>
         
+        <Link to='/driver-stats'>
         <img className='driver-img' src = {driverIMG} alt='Driver Photo'></img>
+        </Link>
 
-        <div className="driver-stats">
+        {/* <div className="driver-stats">
         <b>Wins: {calculateDriverStats('wins')} </b>
         <b>Poles: {calculateDriverStats('poles')} </b>
         <b>Starts: {calculateDriverStats('starts')} </b>
         <b>Top 5: {calculateDriverStats('top5')} </b>
         <b>Top 10: {calculateDriverStats('top10')} </b>
         <b>First Year in F1: {calculateDriverStats('year')} </b>
-        </div>
+        </div> */}
 
 
 
