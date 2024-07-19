@@ -209,22 +209,19 @@ console.log(data)
              
         <div className={`card-container ${driverBorder}`}>
 
+        <Link to={`/driver-stats/${driverId}`}
+        state={{ driverName: name, driverImg: driverIMG }} className='driver-name'>
         <b className='driver-name'>{name}</b>
+        </Link>
+
         <img src={flag} alt='driver flag' className='driver-flag'></img>
         <img src={logo} alt='team-logo' className='team-logo'></img>
         
-        <Link to='/driver-stats'>
+        <Link to={`/driver-stats/${driverId}`}
+        state={{ driverName: name, driverImg: driverIMG }}>
         <img className='driver-img' src = {driverIMG} alt='Driver Photo'></img>
         </Link>
 
-        {/* <div className="driver-stats">
-        <b>Wins: {calculateDriverStats('wins')} </b>
-        <b>Poles: {calculateDriverStats('poles')} </b>
-        <b>Starts: {calculateDriverStats('starts')} </b>
-        <b>Top 5: {calculateDriverStats('top5')} </b>
-        <b>Top 10: {calculateDriverStats('top10')} </b>
-        <b>First Year in F1: {calculateDriverStats('year')} </b>
-        </div> */}
 
 
 

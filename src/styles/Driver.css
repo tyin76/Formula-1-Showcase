@@ -63,11 +63,13 @@
 }
 
 .driver-name {
-    align-self:flex-start;
+    align-self: flex-start;
     width: 100%; 
     text-align: left; 
     font-family: F1-regular;
     padding-bottom: 3px;
+    text-decoration: none;
+    color: black;
   }
 
 .red-bull {
@@ -78,6 +80,10 @@
 .mclaren {
     border-top: 2px solid rgb(255, 128, 0);
     border-right: 2px solid rgb(255, 128, 0);
+
+    .driver-name {
+        color: rgb(255, 128, 0);
+    }
 }
 
 .mclaren > .team-logo {
@@ -87,6 +93,10 @@
 .ferrari {
     border-top: 2px solid rgb(239, 26, 45);
     border-right: 2px solid rgb(239, 26, 45);
+
+    .driver-name {
+        color: rgb(239, 26, 45);
+    }
 }
 
 .ferrari > .team-logo {
@@ -96,11 +106,19 @@
 .mercedes {
     border-top: 2px solid rgb(0, 161, 155);
     border-right: 2px solid rgb(0, 161, 155);
+
+    .driver-name {
+        color: rgb(0, 161, 155);
+    }
 }
 
 .aston {
     border-top: 2px solid rgb(10, 121, 104);
     border-right: 2px solid rgb(10, 121, 104);
+
+    .driver-name {
+        color: rgb(10, 121, 104);
+    }
 }
 
 .aston > .team-logo {
@@ -111,24 +129,44 @@
 .haas {
     border-top: 2px solid rgb(158, 153, 155);
     border-right: 2px solid rgb(158, 153, 155);
+
+    .driver-name {
+        color: rgb(158, 153, 155);
+    }
 }
 
 .rb {
     border-top: 2px solid rgb(14, 29, 197);
     border-right: 2px solid rgb(14, 29, 197);
+
+    .driver-name {
+        color: rgb(14, 29, 197);
+    }
 }
 
 .williams {
     border-top: 2px solid rgb(0, 160, 222);
     border-right: 2px solid rgb(0, 160, 222);
+
+    .driver-name {
+        color: rgb(0, 160, 222);
+    }
 }
 
 .kick {
     border-top: 2px solid rgb(0,231,1);
     border-right: 2px solid rgb(0,231,1);
+
+    .driver-name {
+        color: rgb(0,231,1);
+    }
 }
 
 .alpine {
     border-top: 2px solid #FD4BC7;
     border-right: 2px solid #FD4BC7;
+
+    .driver-name {
+        color: #FD4BC7;
+    }
 }

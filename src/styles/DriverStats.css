@@ -1,0 +1,31 @@
+/* Driver.css or relevant stylesheet */
+
+.driver-stats-page-container {
+    display: flex;
+    align-items: center; /* Align items vertically to the center */
+    width: 80%; /* Make container fill 80% of the page width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding for spacing */
+}
+
+.driver-photo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and stats */
+}
+
+.driver-stats-page {
+    display: flex;
+    flex-direction: column; /* Stack stats vertically */
+    justify-content: center; /* Center stats vertically within the column */
+}
+
+.name-header {
+    font-size: 1.5rem; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space below the name */
+}
+
+.driver-stats-page b {
+    margin-bottom: 5px; /* Space between stats */
+}
+
