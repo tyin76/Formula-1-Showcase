@@ -28,7 +28,7 @@ import '../styles/Driver.css'
 import { containerClasses } from '@mui/material';
 
 
-function Driver({driverId, driverBorder, flag, logo}) {
+function Driver({driverId, driverBorder, flag, logo, raceNumber}) {
 
     const [data, setData] = useState([])
     var driverIMG;
@@ -210,7 +210,7 @@ console.log(data)
         <div className={`card-container ${driverBorder}`}>
 
         <Link to={`/driver-stats/${driverId}`}
-        state={{ driverName: name, driverImg: driverIMG }} className='driver-name'>
+        state={{ driverName: name, driverImg: driverIMG , Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}} className='driver-name'>
         <b className='driver-name'>{name}</b>
         </Link>
 
@@ -218,7 +218,7 @@ console.log(data)
         <img src={logo} alt='team-logo' className='team-logo'></img>
         
         <Link to={`/driver-stats/${driverId}`}
-        state={{ driverName: name, driverImg: driverIMG }}>
+        state={{ driverName: name, driverImg: driverIMG, Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}}>
         <img className='driver-img' src = {driverIMG} alt='Driver Photo'></img>
         </Link>
 

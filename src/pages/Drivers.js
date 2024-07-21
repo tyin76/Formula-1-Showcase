@@ -26,6 +26,28 @@ import haas from '../images/haas.png'
 import kick from '../images/kick.png'
 import williams from '../images/williams.png'
 import vcarb from '../images/vcarb.png'
+import maxNumber from '../images/max number.png'
+import perezNum from '../images/perez num.png'
+import leclercNum from '../images/leclerc num.png'
+import sainzNum from '../images/sainz num.png'
+import landoNum from '../images/lando num.png'
+import piastriNum from '../images/piastri num.png'
+import russelNum from '../images/russel num.png'
+import hamiltonNum from '../images/hamilton num.png'
+import alonsoNum from '../images/alonso num.png'
+import strollNum from '../images/stroll num.png'
+import yukiNum from '../images/yuki num.png'
+import ricNum from '../images/ric num.png'
+import hulkNum from '../images/hulk num.png'
+import magNum from '../images/mag num.png'
+import albonNum from '../images/albon num.png'
+import sargeantNum from '../images/sargeant num.png'
+import oconNum from '../images/ocon num.png'
+import gaslyNum from '../images/gasly num.png'
+import zhouNum from '../images/zhou num.png'
+import bottasNum from '../images/bottas num.png'
+
+
 
 
 
@@ -34,7 +56,7 @@ function Drivers() {
     <>
     <div className="driver-page-container">
       <div className='driver-gallery'>
-        <Driver driverId={4665} driverBorder='red-bull' flag={DutchFlag} logo={RedBullLogo}></Driver>
+        <Driver driverId={4665} driverBorder='red-bull' flag={DutchFlag} logo={RedBullLogo} raceNumber={maxNumber}></Driver>
         <Driver driverId={4472} driverBorder='red-bull' flag={MexicoFlag} logo={RedBullLogo}></Driver>
         <Driver driverId={5498} driverBorder='ferrari' flag={MonacoFlag} logo={ferrari}></Driver>
         <Driver driverId={4686} driverBorder='ferrari' flag={SpainFlag} logo={ferrari}></Driver>

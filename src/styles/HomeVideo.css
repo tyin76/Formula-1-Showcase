@@ -43,11 +43,19 @@
     height: 100%;
     position: fixed;
     z-index: -1;
+    position: absolute;
+    
   }
+
+  html.home-page, body.home-page {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
 
 
 .home-container > .title-header {
-    position: relative;
+    position: absolute;
     width: 100%;
     text-align: center;
 }
@@ -55,8 +63,9 @@
     font-family: F1-wide;
     color: rgb(161, 33, 33);
     position: absolute;
-    top: -32%; 
+    top: 22%;
     left: 52%;
     transform: translate(-50%, -50%);
     font-size: 4vw; 
+    
 }

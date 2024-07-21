@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../styles/HomeVideo.css'
 import F1HomeVideo from '../videos/videoplayback.mp4'
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 
 
@@ -9,6 +10,13 @@ import Button from '@mui/material/Button';
 
 function HomeVideo() {
     const [muted, setMuted] = useState(true)
+
+    useEffect(() => {
+      document.documentElement.classList.add('home-page');
+      return () => {
+          document.documentElement.classList.remove('home-page');
+      };
+  }, []);
     
     function handleMute() {
         setMuted(!muted);
