@@ -26,14 +26,39 @@
     border-top: 2px solid black;
     border-right: 2px solid black;
     border-radius: 10px;
-    width: 300px; /* Adjust width as needed */
+    width: 300px; 
     position: relative;
     transition: 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .card-container:hover {
     transform: scale(1.05);
     transition: 0.2s ease;
+}
+
+.show-driver-stats {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-family: F1-regular;
+    cursor: pointer;
+    margin-top: 20%;
+}
+
+.race-number {
+    width: 100px;
+    position: relative;
+    top: 79%;
+    align-items: flex-end;
+    text-align: end;
+    justify-content: end;
+    max-width: 100%; 
+    height: auto;
 }
 
 .team-logo {
@@ -48,6 +73,7 @@
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px; /* Space between image and stats */
+    cursor: pointer;
 }
 
 .driver-stats {

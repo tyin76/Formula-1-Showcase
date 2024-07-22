@@ -31,8 +31,8 @@
 
 .mute-button {
     position:relative;
-    left: 46.5%;
-    bottom: 57%;
+    left: 46.2%;
+    bottom: 47.5%;
 
     
 }
@@ -63,7 +63,7 @@
     font-family: F1-wide;
     color: rgb(161, 33, 33);
     position: absolute;
-    top: 22%;
+    top: 15%;
     left: 52%;
     transform: translate(-50%, -50%);
     font-size: 4vw; 

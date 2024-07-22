@@ -16,49 +16,49 @@ function DriverStats() {
     
 
 
-        const url = `https://f1-motorsport-data.p.rapidapi.com/stats?driverId=${driverId}`;
-        const options = {
-        method: 'GET',
-        headers: {
-            'x-rapidapi-key': 'a1ac7dbe9bmsh47512af3179ad70p1f25adjsn0d37243aa5dc',
-            'x-rapidapi-host': 'f1-motorsport-data.p.rapidapi.com'
-        }
-};
+//         const url = `https://f1-motorsport-data.p.rapidapi.com/stats?driverId=${driverId}`;
+//         const options = {
+//         method: 'GET',
+//         headers: {
+//             'x-rapidapi-key': 'a1ac7dbe9bmsh47512af3179ad70p1f25adjsn0d37243aa5dc',
+//             'x-rapidapi-host': 'f1-motorsport-data.p.rapidapi.com'
+//         }
+// };
 
         
-useEffect(() => {
-    const getAPI = async () => 
-    {
-        try {
-            const response =  await fetch(url, options);
-            const result =  await response.json();
-            const array = [];
-            for (var i = 0; i < result.length; i++) {
-                const { avgFinish, avgStart, poles, year, starts, top5, top10, rank, wins, points } = result[i];
-                const driver = {
-                    avgFinish: avgFinish,
-                    avgStart: avgStart,
-                    points: points,
-                    poles: poles,
-                    rank: rank,
-                    starts: starts,
-                    top5: top5,
-                    top10: top10,
-                    wins: wins,
-                    year: year
-                  };
-                  array.push(driver)
+// useEffect(() => {
+//     const getAPI = async () => 
+//     {
+//         try {
+//             const response =  await fetch(url, options);
+//             const result =  await response.json();
+//             const array = [];
+//             for (var i = 0; i < result.length; i++) {
+//                 const { avgFinish, avgStart, poles, year, starts, top5, top10, rank, wins, points } = result[i];
+//                 const driver = {
+//                     avgFinish: avgFinish,
+//                     avgStart: avgStart,
+//                     points: points,
+//                     poles: poles,
+//                     rank: rank,
+//                     starts: starts,
+//                     top5: top5,
+//                     top10: top10,
+//                     wins: wins,
+//                     year: year
+//                   };
+//                   array.push(driver)
                   
-            }
+//             }
             
-            setData(array)
-        } catch (error) {
-            console.error(error);
-        }
+//             setData(array)
+//         } catch (error) {
+//             console.error(error);
+//         }
 
-     }
-     getAPI();
-}, [])
+//      }
+//      getAPI();
+// }, [])
 
 console.log(data)
 

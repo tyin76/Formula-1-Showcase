@@ -31,6 +31,7 @@ import { containerClasses } from '@mui/material';
 function Driver({driverId, driverBorder, flag, logo, raceNumber}) {
 
     const [data, setData] = useState([])
+    const [showStats, setShowStats] = useState(false)
     var driverIMG;
     var name;
     
@@ -142,49 +143,49 @@ function Driver({driverId, driverBorder, flag, logo, raceNumber}) {
             break;
     }
 
-//     const url = `https://f1-motorsport-data.p.rapidapi.com/stats?driverId=${driverId}`;
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'x-rapidapi-key': 'a1ac7dbe9bmsh47512af3179ad70p1f25adjsn0d37243aa5dc',
-//             'x-rapidapi-host': 'f1-motorsport-data.p.rapidapi.com'
-//         }
-// };
+    //         const url = `https://f1-motorsport-data.p.rapidapi.com/stats?driverId=${driverId}`;
+    //         const options = {
+    //         method: 'GET',
+    //         headers: {
+    //             'x-rapidapi-key': 'a1ac7dbe9bmsh47512af3179ad70p1f25adjsn0d37243aa5dc',
+    //             'x-rapidapi-host': 'f1-motorsport-data.p.rapidapi.com'
+    //         }
+    // };
 
-        
-// useEffect(() => {
-//     const getAPI = async () => 
-//     {
-//         try {
-//             const response =  await fetch(url, options);
-//             const result =  await response.json();
-//             const array = [];
-//             for (var i = 0; i < result.length; i++) {
-//                 const { avgFinish, avgStart, poles, year, starts, top5, top10, rank, wins, points } = result[i];
-//                 const driver = {
-//                     avgFinish: avgFinish,
-//                     avgStart: avgStart,
-//                     points: points,
-//                     poles: poles,
-//                     rank: rank,
-//                     starts: starts,
-//                     top5: top5,
-//                     top10: top10,
-//                     wins: wins,
-//                     year: year
-//                   };
-//                   array.push(driver)
-//                   console.log(driver)
-//             }
             
-//             setData(array)
-//         } catch (error) {
-//             console.error(error);
-//         }
+    // useEffect(() => {
+    //     const getAPI = async () => 
+    //     {
+    //         try {
+    //             const response =  await fetch(url, options);
+    //             const result =  await response.json();
+    //             const array = [];
+    //             for (var i = 0; i < result.length; i++) {
+    //                 const { avgFinish, avgStart, poles, year, starts, top5, top10, rank, wins, points } = result[i];
+    //                 const driver = {
+    //                     avgFinish: avgFinish,
+    //                     avgStart: avgStart,
+    //                     points: points,
+    //                     poles: poles,
+    //                     rank: rank,
+    //                     starts: starts,
+    //                     top5: top5,
+    //                     top10: top10,
+    //                     wins: wins,
+    //                     year: year
+    //                 };
+    //                 array.push(driver)
+                    
+    //             }
+                
+    //             setData(array)
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
 
-//      }
-//      getAPI();
-// }, [])
+    //     }
+    //     getAPI();
+    // }, [])
 
 console.log(data)
 
@@ -205,22 +206,27 @@ console.log(data)
     }
 
     function styleDriverCard() {
-         return ( 
-             
-        <div className={`card-container ${driverBorder}`}>
 
-        <Link to={`/driver-stats/${driverId}`}
-        state={{ driverName: name, driverImg: driverIMG , Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}} className='driver-name'>
-        <b className='driver-name'>{name}</b>
-        </Link>
-
-        <img src={flag} alt='driver flag' className='driver-flag'></img>
-        <img src={logo} alt='team-logo' className='team-logo'></img>
         
-        <Link to={`/driver-stats/${driverId}`}
-        state={{ driverName: name, driverImg: driverIMG, Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}}>
+
+        if (!showStats) {
+         return (
+        
+        // return if showStats is false
+        <div className={`card-container ${driverBorder} flip`} onClick={() => setShowStats(true)}>
+
+        {/* <Link to={`/driver-stats/${driverId}`}
+        state={{ driverName: name, driverImg: driverIMG , Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}} className='driver-name'> */}
+        <b className='driver-name'>{name}</b>
+        {/* </Link> */}
+
+        <img src={flag} alt='driver flag' className='driver-flag' onClick={(e) => e.stopPropagation()}></img>
+        <img src={logo} alt='team-logo' className='team-logo' onClick={(e) => e.stopPropagation()}></img>
+        
+        {/* <Link to={`/driver-stats/${driverId}`}
+        state={{ driverName: name, driverImg: driverIMG, Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}}> */}
         <img className='driver-img' src = {driverIMG} alt='Driver Photo'></img>
-        </Link>
+        {/* </Link> */}
 
 
 
@@ -228,6 +234,35 @@ console.log(data)
         </div>
 
         )
+         }
+
+         if (showStats) {
+
+            return (
+            <div className={`card-container ${driverBorder}`} onClick={() => setShowStats(false)}>
+
+                <b className='driver-name'>{name}</b>
+            
+                <img src={flag} alt='driver flag' className='driver-flag' onClick={(e) => e.stopPropagation()}></img>
+                <img src={logo} alt='team-logo' className='team-logo' onClick={(e) => e.stopPropagation()}></img>
+            
+                <div className='show-driver-stats' onClick={() => setShowStats(false)}> 
+                <b>Wins 🏆: {calculateDriverStats('wins')} </b>
+                <b>Poles 🏁: {calculateDriverStats('poles')} </b>
+                <b>Starts 🏎️: {calculateDriverStats('starts')} </b>
+                <b>Top 5 🔝5️⃣: {calculateDriverStats('top5')} </b>
+                <b>Top 10 🔝🔟: {calculateDriverStats('top10')} </b>
+                <b>First Year in F1 🗓️: {calculateDriverStats('year')} </b>
+                </div>
+
+                
+                <img src={raceNumber} className='race-number'></img>
+
+
+
+            </div>
+            )
+         }
 
 
     }
