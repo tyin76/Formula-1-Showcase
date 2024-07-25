@@ -28,7 +28,7 @@
   width: 120px;
   height: auto;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 200px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -73,15 +73,14 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(20, auto);
     grid-gap: 5px;
     list-style: none;
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin-right: 2rem;
-  }
-  
+    margin-right: 100px;
+}
   .nav-item {
     height: 5px;
   }

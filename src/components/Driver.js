@@ -64,12 +64,12 @@ function Driver({driverId, driverBorder, flag, logo, raceNumber}) {
         case 4472: 
             console.log("PEREZ")
             driverIMG = Perez
-            name = "Sergio Perez"
+            name = "Sergio Pérez"
             break;
         case 5503:
             console.log("RUSSEL")
             driverIMG = Russel
-            name = "George Russel"
+            name = "George Russell"
             break;
         case 868:
             console.log("HAMILTON")
@@ -213,7 +213,7 @@ console.log(data)
          return (
         
         // return if showStats is false
-        <div className={`card-container ${driverBorder} flip`} onClick={() => setShowStats(true)}>
+        <div className={`card-container ${driverBorder}`} onClick={() => setShowStats(true)}>
 
         {/* <Link to={`/driver-stats/${driverId}`}
         state={{ driverName: name, driverImg: driverIMG , Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}} className='driver-name'> */}
@@ -245,6 +245,7 @@ console.log(data)
             
                 <img src={flag} alt='driver flag' className='driver-flag' onClick={(e) => e.stopPropagation()}></img>
                 <img src={logo} alt='team-logo' className='team-logo' onClick={(e) => e.stopPropagation()}></img>
+                
             
                 <div className='show-driver-stats' onClick={() => setShowStats(false)}> 
                 <b>Wins 🏆: {calculateDriverStats('wins')} </b>
@@ -254,12 +255,10 @@ console.log(data)
                 <b>Top 10 🔝🔟: {calculateDriverStats('top10')} </b>
                 <b>First Year in F1 🗓️: {calculateDriverStats('year')} </b>
                 </div>
-
-                
                 <img src={raceNumber} className='race-number'></img>
 
-
-
+                
+                
             </div>
             )
          }

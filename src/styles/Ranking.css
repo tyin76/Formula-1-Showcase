@@ -1,0 +1,79 @@
+@font-face {
+    font-family: F1-black;
+    src: url(../fonts/Formula1-Black.ttf);
+}
+
+@font-face {
+    font-family: F1-bold;
+    src: url(../fonts/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: F1-regular;
+    src: url(../fonts/Formula1-Regular.ttf);
+}
+
+@font-face {
+    font-family: F1-wide;
+    src: url(../fonts/Formula1-Wide.ttf);
+}
+
+.ranking-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* border-top: 2px solid black;
+    border-right: 2px solid black; */
+    border-radius: 10px;
+    width: 300px;
+    height: 425px;
+    position: relative;
+    transition: 0.2s ease;
+    overflow: hidden;
+    margin-top: 10px;
+    font-family: F1-regular;
+}
+
+.ranking-card-container {
+    display: flex;
+    flex-direction: row; /* This makes the children elements layout horizontally */
+    flex-wrap: wrap; /* This allows the cards to wrap to the next line if they overflow */
+    justify-content: center; /* Centers the card containers horizontally */
+    gap: 20px; /* Adds space between the card containers */
+    transition: 0.2s ease;
+}
+
+.driver-photo {
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    align-self: center;
+    margin-top: -25px;
+}
+
+
+.ranking-card-container :hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
+
+.gold {
+    color: rgb(255, 215, 0);
+}
+
+.silver {
+    color: silver;
+}
+
+.bronze {
+    color: rgb(205, 127, 50);
+}
+
+.rank-number {
+   margin-top: -10px;
+}
+
+.points {
+    font-family: F1-wide;
+}

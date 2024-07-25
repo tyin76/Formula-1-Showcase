@@ -26,7 +26,8 @@
     border-top: 2px solid black;
     border-right: 2px solid black;
     border-radius: 10px;
-    width: 300px; 
+    width: 300px;
+    height: 400px;
     position: relative;
     transition: 0.2s ease;
     cursor: pointer;
@@ -98,7 +99,7 @@
     align-self: flex-start;
     width: 100%; 
     text-align: left; 
-    font-family: F1-regular;
+    font-family: F1-bold;
     padding-bottom: 3px;
     text-decoration: none;
     color: black;
