@@ -4,13 +4,14 @@ import { useState } from 'react'
 import '../styles/Navbar.css'
 import Logo from '../images/F1 Logo.png'
 
-
-
 function Navbar() {
     const [click, setClick] = useState(false)
+    const [dropdown, setDropdown] = useState(false)
+   
 
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false)
+
  
     
   return (
@@ -56,11 +57,30 @@ function Navbar() {
                 </Link>
             </li>
 
-            <li className='nav-item'>
+            
+           
+            <li className='nav-item'
+             onMouseLeave={() => setDropdown(false)}
+             onMouseEnter={() => setDropdown(true)}>
+
+               
                 <Link to='/rankings' className='nav-links' onClick={closeMobileMenu}>
                     Rankings
                 </Link>
-            </li>
+
+                {dropdown && <div className='dropdown-menu'>
+                <Link to='/rankings' className='nav-links hover-links'>
+                    Drivers
+                </Link> 
+                
+                 <Link to='/rankings/teams' className='nav-links hover-links'>
+                    Teams
+                </Link> 
+
+                </div> }
+
+               </li>
+            
 
             <li className='nav-item'>
                 <Link to='/quiz' className='nav-links' onClick={closeMobileMenu}>
