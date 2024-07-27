@@ -5,6 +5,7 @@ import Home from './pages/Home.js';
 import DriverPage from './pages/Drivers.js';
 import DriverStats from './components/DriverStats';
 import Rankings from './pages/RankingPage.js'
+import TeamRanking from './pages/TeamRankingPage.js';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/drivers' exact Component={DriverPage}/>
           <Route path='/driver-stats/:driverId' exact Component={DriverStats} />
           <Route path='/rankings' exact Component={Rankings} />
+          <Route path='/rankings/teams' exact Component={TeamRanking} />
           
           
           

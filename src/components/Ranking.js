@@ -186,10 +186,7 @@ function Ranking() {
         }
         getAPI();
     }, [])
-    
-    if (data.length > 0) {
-        console.log(data)
-    }
+
 
     function styleDriverRankings() {
 
@@ -227,7 +224,7 @@ function Ranking() {
                 </>
             );
         } else {
-            return <b>LOADING...</b>;
+            return <h1 className='loading-text'>LOADING...</h1>;
         }
     }
 
