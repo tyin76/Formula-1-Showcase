@@ -1,0 +1,59 @@
+@font-face {
+    font-family: F1-black;
+    src: url(../fonts/Formula1-Black.ttf);
+}
+
+@font-face {
+    font-family: F1-bold;
+    src: url(../fonts/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: F1-regular;
+    src: url(../fonts/Formula1-Regular.ttf);
+}
+
+@font-face {
+    font-family: F1-wide;
+    src: url(../fonts/Formula1-Wide.ttf);
+}
+
+.schedule-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entire-calendar {
+    align-self: center;
+    width: auto;
+    height: auto;
+}
+
+.race-info {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.race-info h3 {
+    margin-top: 0;
+    color: black;
+    padding-bottom: 5px;
+    font-family: F1-bold;
+}
+
+.info-disclaimer {
+    width: 300px;
+    height: auto;
+    text-align: center;
+    margin-top: -40px;
+    font-size: 11px;
+    font-family: F1-regular;
+}

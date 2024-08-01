@@ -50,8 +50,6 @@
     font-family: F1-wide;
 }
 
-
-
 .team-points {
     position: absolute;
     margin-top: 65px;
@@ -65,3 +63,30 @@
     font-size: 40px;
 }
 
+#team-ranking-logo-specific {
+    top: 5%;
+    right: 1%;
+}
+
+.red-bull > #team-ranking-logo-specific {
+    margin-top: -4%;
+    margin-right: 1.7%;
+}
+
+.mclaren > #team-ranking-logo-specific {
+    margin-top: -0.4%;
+}
+
+.ferrari > #team-ranking-logo-specific {
+    margin-top: -2.5%;
+}
+
+.mercedes > #team-ranking-logo-specific {
+    margin-top: -3.2%;
+    margin-right: 1%;
+}
+
+.aston > #team-ranking-logo-specific {
+    margin-top: -0.6%;
+    margin-right: 1%;
+}

@@ -122,7 +122,7 @@ function TeamRanking() {
                 <div className={`team-card ${team}`}>
                 <b className='team-name driver-name' id='team-specific'>{entry.team.displayName}</b>
                 <b className='team-points driver-name' id='team-specific'>Points: {entry.stats[1].displayValue}</b>
-                <img src={logo} alt='team-logo' className='team-logo'></img>
+                <img src={logo} alt='team-logo' className='team-logo' id='team-ranking-logo-specific'></img>
                 <h2 className={`team-rank-number ${rankClass}`}>{index + 1}</h2>
                 <img src={car} alt='team-car' className='team-car'></img>
                 </div>

@@ -211,8 +211,8 @@ function Ranking() {
                                 return (
                                     <div className={`ranking-card ${driverTeam} ${rankClass}`} key={index}>
                                         <b className='driver-name'>{driverName}</b>
-                                        <img src={driverFlag} alt='driver-flag' className='driver-flag'></img>
-                                        <img src={driverTeamLogo} alt='driver-team-logo' className='team-logo'></img>
+                                        <img src={driverFlag} alt='driver-flag' className='driver-flag' id='driver-flag-rank-specific'></img>
+                                        <img src={driverTeamLogo} alt='driver-team-logo' className='team-logo' id='driver-team-rank-specific'></img>
                                         <h1 className='rank-number'>{index + 1}</h1>
                                         <img src={imageUrl} alt={driverName} className='driver-photo'/>
                                         <h3 className='points'> Points: {entry.stats[1].displayValue}</h3>

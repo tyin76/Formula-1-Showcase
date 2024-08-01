@@ -207,61 +207,75 @@ console.log(data)
 
     function styleDriverCard() {
 
-        
+    
+         return ( 
 
-        if (!showStats) {
-         return (
-        
-        // return if showStats is false
-        <div className={`card-container ${driverBorder}`} onClick={() => setShowStats(true)}>
+            
+        <div className={`card-container ${driverBorder} ${showStats ? 'flip' : ''}`} onClick={() => setShowStats(!showStats)}>
 
         {/* <Link to={`/driver-stats/${driverId}`}
         state={{ driverName: name, driverImg: driverIMG , Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}} className='driver-name'> */}
+        <div className='front-card'>
         <b className='driver-name'>{name}</b>
         {/* </Link> */}
 
-        <img src={flag} alt='driver flag' className='driver-flag' onClick={(e) => e.stopPropagation()}></img>
-        <img src={logo} alt='team-logo' className='team-logo' onClick={(e) => e.stopPropagation()}></img>
+         <img src={flag} alt='driver flag' className='driver-flag' onClick={(e) => e.stopPropagation()}></img>
+         <img src={logo} alt='team-logo' className='team-logo' onClick={(e) => e.stopPropagation()}></img>
         
         {/* <Link to={`/driver-stats/${driverId}`}
         state={{ driverName: name, driverImg: driverIMG, Flag: flag, Logo: logo, DriverBorder: driverBorder, raceNumber: raceNumber}}> */}
         <img className='driver-img' src = {driverIMG} alt='Driver Photo'></img>
         {/* </Link> */}
+        </div>
+        
+                <div className='back-card'>
+                <b className={`back-card-driver-name ${driverBorder}`}>{name}</b>
+                    
+                    <div className='show-driver-stats' onClick={() => setShowStats(!showStats)}> 
+                    <b>Wins 🏆: {calculateDriverStats('wins')} </b>
+                    <b>Poles 🏁: {calculateDriverStats('poles')} </b>
+                    <b>Starts 🏎️: {calculateDriverStats('starts')} </b>
+                    <b>Top 5 🔝5️⃣: {calculateDriverStats('top5')} </b>
+                    <b>Top 10 🔝🔟: {calculateDriverStats('top10')} </b>
+                    <b>First Year in F1 🗓️: {calculateDriverStats('year')} </b>
+                    
+                    </div>
+                    
+                    <img src={raceNumber} className='race-number'></img>
 
-
-
+                </div>
+                
+                 
+              
 
         </div>
+        
 
         )
-         }
+         
 
-         if (showStats) {
+        //  if (showStats) {
 
-            return (
-            <div className={`card-container ${driverBorder}`} onClick={() => setShowStats(false)}>
+        //     return (
+        //     <div className={`card-container ${driverBorder}`} onClick={() => setShowStats(false)}>
 
-                <b className='driver-name'>{name}</b>
+        //         <b className='driver-name'>{name}</b>       
             
-                <img src={flag} alt='driver flag' className='driver-flag' onClick={(e) => e.stopPropagation()}></img>
-                <img src={logo} alt='team-logo' className='team-logo' onClick={(e) => e.stopPropagation()}></img>
-                
-            
-                <div className='show-driver-stats' onClick={() => setShowStats(false)}> 
-                <b>Wins 🏆: {calculateDriverStats('wins')} </b>
-                <b>Poles 🏁: {calculateDriverStats('poles')} </b>
-                <b>Starts 🏎️: {calculateDriverStats('starts')} </b>
-                <b>Top 5 🔝5️⃣: {calculateDriverStats('top5')} </b>
-                <b>Top 10 🔝🔟: {calculateDriverStats('top10')} </b>
-                <b>First Year in F1 🗓️: {calculateDriverStats('year')} </b>
-                </div>
-                <img src={raceNumber} className='race-number'></img>
+                // <div className='show-driver-stats' onClick={() => setShowStats(false)}> 
+                // <b>Wins 🏆: {calculateDriverStats('wins')} </b>
+                // <b>Poles 🏁: {calculateDriverStats('poles')} </b>
+                // <b>Starts 🏎️: {calculateDriverStats('starts')} </b>
+                // <b>Top 5 🔝5️⃣: {calculateDriverStats('top5')} </b>
+                // <b>Top 10 🔝🔟: {calculateDriverStats('top10')} </b>
+                // <b>First Year in F1 🗓️: {calculateDriverStats('year')} </b>
+                // </div>
+                // <img src={raceNumber} className='race-number'></img>
 
                 
                 
-            </div>
-            )
-         }
+        //     </div>
+        //     )
+        //  }
 
 
     }
