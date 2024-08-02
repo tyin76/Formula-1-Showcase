@@ -166,11 +166,11 @@ function Schedule() {
                 day={day}
                 outsideCurrentMonth={outsideCurrentMonth}
                 sx={{
-                    backgroundColor: isRaceDay ? 'green' : isRaceDayButNotFinished ? 'teal' : 'transparent',
+                    backgroundColor: isRaceDay ? 'green' : isRaceDayButNotFinished ? '#ff4081' : 'transparent',
                     color: isRaceDay ? 'white' : isRaceDayButNotFinished ? 'white' : 'inherit',
                     '&:hover': {
-                        outline: '2px solid black',
-                        backgroundColor: isRaceDay ? 'green' : isRaceDayButNotFinished ? 'teal' : 'transparent'
+                        outline: '2px solid grey',
+                        backgroundColor: isRaceDay ? 'black' : isRaceDayButNotFinished ? 'black' : 'transparent'
                     },
                 }}
             />
@@ -186,12 +186,12 @@ function Schedule() {
        return (
         <>
         <div className='race-info'>
-        <h3>Grand Prix: {raceInfo.gPrx}</h3>
-        <h3>Circuit Name: {raceInfo.crct}</h3>
-        {raceInfo.winner && <h3> Winner: {raceInfo.winner}</h3>}
-        <h3>Date: {raceInfo.endDate}</h3>
-        <h3>Start Time: {raceInfo.time} UTC</h3>
-        {raceInfo.isPostponedOrCanceled && <h3>Status : Postponed or Cancelled</h3>}
+        <h3>🏁 Grand Prix: {raceInfo.gPrx}</h3>
+        <h3>🏎️ Circuit Name: {raceInfo.crct}</h3>
+        {raceInfo.winner && <h3>🏆 Winner: {raceInfo.winner}</h3>}
+        <h3>📅 Date: {raceInfo.endDate}</h3>
+        <h3>⏰ Start Time: {raceInfo.time} UTC</h3>
+        {raceInfo.isPostponedOrCanceled && <h3>⚠️ Status : Postponed or Cancelled</h3>}
         
         </div>
         </>
@@ -200,7 +200,7 @@ function Schedule() {
 
   return (
     <>
-    
+
     <div className='schedule-container'>
 
         <div className='entire-calendar'>
@@ -209,6 +209,17 @@ function Schedule() {
         <DateCalendar className='calendar'
             sx={{
                 width: '80vw',
+                color: 'white',
+                '& .MuiPickersArrowSwitcher-button': {
+                    color: 'white',
+                    // backgroundColor: 'white',
+                  },
+                  '& .MuiDayCalendar-weekDayLabel': {
+                    color: 'white',
+                  },
+                  '& .MuiPickersCalendarHeader-switchViewButton': {
+                    color: 'white',
+                  },
               }}
           referenceDate={dayjs()}
           views={['year', 'month', 'day']}
@@ -229,6 +240,7 @@ function Schedule() {
 
        
     </div>
+    
     </>
 
   )
