@@ -170,7 +170,7 @@ function Schedule() {
                     color: isRaceDay ? 'white' : isRaceDayButNotFinished ? 'white' : 'inherit',
                     '&:hover': {
                         outline: '2px solid grey',
-                        backgroundColor: isRaceDay ? 'black' : isRaceDayButNotFinished ? 'black' : 'transparent'
+                        backgroundColor: 'black'
                     },
                 }}
             />
