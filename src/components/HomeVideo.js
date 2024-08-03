@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import '../styles/HomeVideo.css'
 import F1HomeVideo from '../videos/This is Formula One.mp4'
-import F1RainVideo from '../videos/This is Formula One _ Rain Edition.mp4'
+import F1RainVideo from '../videos/This is Formula One _ Rain EditionTrimmed.mp4'
+import F1VisorVideo from '../videos/VisorVideoTrimmed.mp4'
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
 
@@ -13,10 +14,11 @@ function HomeVideo() {
     const [muted, setMuted] = useState(true)
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
 
-    const videos = [F1HomeVideo, F1RainVideo];
+    const videos = [F1HomeVideo, F1RainVideo, F1VisorVideo];
 
     useEffect(() => {
       document.documentElement.classList.add('home-page');
+      window.scrollTo(0, 0);
       return () => {
           document.documentElement.classList.remove('home-page');
       };
