@@ -7,6 +7,7 @@ import DriverStats from './components/DriverStats';
 import Rankings from './pages/RankingPage.js'
 import TeamRanking from './pages/TeamRankingPage.js';
 import Schedule from './pages/SchedulePage.js';
+import RaceResults from './components/RaceResult.js'
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/rankings' exact Component={Rankings} />
           <Route path='/rankings/teams' exact Component={TeamRanking} />
           <Route path='/schedule' exact Component={Schedule} />
+          <Route path='/race-results/:eventID' exact Component={RaceResults} />
           
           
           

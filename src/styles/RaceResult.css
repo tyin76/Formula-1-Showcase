@@ -1,0 +1,130 @@
+@font-face {
+    font-family: F1-black;
+    src: url(../fonts/Formula1-Black.ttf);
+}
+
+@font-face {
+    font-family: F1-bold;
+    src: url(../fonts/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: F1-regular;
+    src: url(../fonts/Formula1-Regular.ttf);
+}
+
+@font-face {
+    font-family: F1-wide;
+    src: url(../fonts/Formula1-Wide.ttf);
+}
+
+
+
+.race-result-container {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    
+}
+
+.location-info {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: F1-regular;
+    
+
+    img {
+        width: 100px;
+        padding: 20px;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 20px;
+    }
+}
+
+.circuit-info {
+    font-family: F1-regular;
+    text-align: center;
+}
+
+.circuit-info-img {
+    width: 400px;
+}
+
+.loading-header {
+    text-align: center;
+    font-family: F1-wide;
+    margin-top: 15%;
+}
+
+.fastest-info {
+    font-family: F1-regular;
+    display: flex;
+    flex-direction: column;
+}
+
+.record-holder {
+    display: flex;
+    align-items: center;
+    
+}
+
+.record-holder-img {
+    width: 35px;
+    height: auto;
+    margin-left: 5px;
+}
+
+
+.race-entry-Race {
+    color: blue;
+}
+
+
+
+.race-nav {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    font-family: F1-regular;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .race-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+  }
+  
+  .race-nav li {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 10px;
+  }
+  
+  .race-nav li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .race-nav li.active {
+    background-color: #ffffff;
+    border-left: 4px solid #e10600;
+    padding-left: 16px; /* Compensate for the border */
+    font-family: F1-bold;
+  }
+
+  .race-nav-inner {
+    width: 100%;
+  }

@@ -241,7 +241,7 @@ console.log(data)
                     
                     </div>
                     
-                    <img src={raceNumber} className='race-number'></img>
+                    <img src={raceNumber} className='race-number' id='race-number-specific'></img>
 
                 </div>
                 

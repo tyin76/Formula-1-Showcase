@@ -32,7 +32,7 @@
     transition: 0.7s ease;
     cursor: pointer; 
     transform-style: preserve-3d;
-    
+
 }
 
 .front-card {
@@ -49,7 +49,7 @@
     text-align: center;
     position: absolute;
     transform: rotateY(180deg);
-    backface-visibility: hidden;     
+    backface-visibility: hidden; 
 }
 
 .flip {
@@ -78,11 +78,8 @@
 
 .race-number {
     width: 100px;
-    position: relative;
-    top: 105%;
-    align-items: flex-end; 
-    text-align: end;
-    justify-content: end; 
+    position: absolute;
+    align-self: flex-end; 
     max-width: 100%; 
     height: auto;
 }
@@ -96,11 +93,13 @@
 }
 
 .driver-img {
-    width: 100%;
+    width: auto;
     border-radius: 10px;
     margin-bottom: 10px; 
     cursor: pointer;
     margin-top: 50px;
+    max-height: 280px;
+    
     
 }
 

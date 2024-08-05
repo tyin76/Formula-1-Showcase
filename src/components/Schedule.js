@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Schedule.css'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // MUI imports
 import dayjs from 'dayjs';
@@ -11,6 +12,8 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { PickersDay } from '@mui/x-date-pickers/PickersDay';
 import { blue, green, pink, yellow, black, teal } from '@mui/material/colors';
 import Badge from '@mui/material/Badge';
+import Button from '@mui/material/Button';
+import chequeredFlag from '../images/chequered flag .jpg'
 
 
 
@@ -34,6 +37,10 @@ function Schedule() {
         }
     };
 
+    function extractEventID(evLink) {
+        const match = evLink.match(/\/id\/(\d+)$/);
+        return match ? match[1] : null;
+    }
 
     useEffect(() => {
         const getAPI = async () => 
@@ -51,23 +58,25 @@ function Schedule() {
                     if (result.hasOwnProperty(key)) {
                         result[key].forEach(item => {
                         // pushing isRaceDays info
-                        if (item.endDate && (item.completed === true) && item.gPrx && item.crct || item.winner || item.isPostponedOrCanceled) {
+                        if (item.endDate && (item.completed === true) && item.evLink && item.gPrx && item.crct || item.winner || item.isPostponedOrCanceled) {
                             const isRaceDayInfo = {
                                 endDateAndTime : item.endDate,
                                 gPrx : item.gPrx,
                                 crct : item.crct,
                                 winner : item.winner,
-                                isPostponedOrCanceled : item.isPostponedOrCanceled
+                                isPostponedOrCanceled : item.isPostponedOrCanceled,
+                                evLink : extractEventID(item.evLink)
                             }
                             startDates.push(isRaceDayInfo);
                         }
-                        if (item.endDate && (item.completed === false) && item.gPrx && item.crct || item.winner || item.isPostponedOrCanceled) {
+                        if (item.endDate && (item.completed === false) && item.evLink && item.gPrx && item.crct || item.winner || item.isPostponedOrCanceled) {
                             const isRaceDayButNotFinishedInfo = {
                                 endDateAndTime : item.endDate,
                                 gPrx : item.gPrx,
                                 crct : item.crct,
                                 winner : item.winner,
-                                isPostponedOrCanceled : item.isPostponedOrCanceled
+                                isPostponedOrCanceled : item.isPostponedOrCanceled,
+                                evLink : extractEventID(item.evLink)
                             }
                             notFinishedStartDates.push(isRaceDayButNotFinishedInfo);
                         }
@@ -188,11 +197,16 @@ function Schedule() {
         <div className='race-info'>
         <h3>🏁 Grand Prix: {raceInfo.gPrx}</h3>
         <h3>🏎️ Circuit Name: {raceInfo.crct}</h3>
-        {raceInfo.winner && <h3>🏆 Winner: {raceInfo.winner}</h3>}
+        {raceInfo.winner && <h3 className='winner'>🏆 Winner: {raceInfo.winner}</h3>}
         <h3>📅 Date: {raceInfo.endDate}</h3>
         <h3>⏰ Start Time: {raceInfo.time} UTC</h3>
         {raceInfo.isPostponedOrCanceled && <h3>⚠️ Status : Postponed or Cancelled</h3>}
-        
+
+        <Link to={`/race-results/${raceInfo.evLink}`} className='race-info-btn'
+        state={{endDate: raceInfo.endDate, time: raceInfo.time}}>
+        <Button variant='text' className='race-info-btn'>CLICK ME</Button>
+        </Link>
+
         </div>
         </>
        )
