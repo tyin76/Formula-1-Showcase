@@ -19,7 +19,6 @@
 }
 
 
-
 .quiz-container {
     width: 100vw;
     height: 95%;
@@ -27,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
 }
 
 .quiz-questions {
@@ -37,13 +37,13 @@
 
 .quiz-questions h1 {
     font-family: F1-bold;
-    color: black;
+    color: rgb(220, 210, 210);
 }
 
 .MuiFormControlLabel-root .MuiTypography-root {
-    font-family: F1-regular; /* Change 'Arial' to your preferred font */
-    font-size: 16px; /* Adjust the font size as needed */
-    color: black /* Change the text color if desired */
+    font-family: F1-regular; 
+    font-size: 16px; 
+    color: white; 
   }
 
   .correct .MuiFormControlLabel-label{ 
@@ -53,11 +53,18 @@
 
 .wrong .MuiFormControlLabel-label {
     color: red;
+    font-family: F1-bold;
 }
 
 .no-answer .MuiFormControlLabel-label {
     color: green;
 }
+
+.MuiRadio-root .MuiSvgIcon-root {
+    /* color: rgb(101, 93, 93);  */
+    /* font-size: 2rem; Change the size of the radio button circle */
+    color: rgba(235, 219, 219, 0.59);
+  }
 
 
 .refresh-button {

@@ -141,7 +141,7 @@ function Quiz() {
             </div>
 
             <div className='refresh-button-div'>
-              <Button onClick={() => handleRefreshClick()} variant='contained' className='refresh-button'>PLAY AGAIN</Button>
+              <Button onClick={() => handleRefreshClick()} variant='contained' className='refresh-button'>ANOTHER QUIZ</Button>
               
             </div>
 

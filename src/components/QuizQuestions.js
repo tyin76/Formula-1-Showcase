@@ -120,7 +120,7 @@ import React from 'react'
         {
             question: "What is the purpose of the Halo device in Formula 1 cars?",
             options: ["To protect the driver's head", "To improve aerodynamics", "To cool the driver", "To reduce drag"],
-            answer: "To protect the driver's head in case of an accident"
+            answer: "To protect the driver's head"
         },
         {
             question: "What is the minimum weight of a Formula 1 car for the 2024 season, including the driver?",

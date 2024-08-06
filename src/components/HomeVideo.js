@@ -12,9 +12,13 @@ import { useEffect } from 'react';
 
 function HomeVideo() {
     const [muted, setMuted] = useState(true)
-    const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-
     const videos = [F1HomeVideo, F1RainVideo, F1VisorVideo];
+
+    const getRandomIndex = () => Math.floor(Math.random() * videos.length);
+
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(getRandomIndex())
+
+    
 
     useEffect(() => {
       document.documentElement.classList.add('home-page');
