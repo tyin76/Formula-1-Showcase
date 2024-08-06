@@ -8,6 +8,7 @@ import Rankings from './pages/RankingPage.js'
 import TeamRanking from './pages/TeamRankingPage.js';
 import Schedule from './pages/SchedulePage.js';
 import RaceResults from './components/RaceResult.js'
+import QuizPage from './pages/QuizPage.js'
 
 
 
@@ -25,7 +26,7 @@ function App() {
           <Route path='/rankings/teams' exact Component={TeamRanking} />
           <Route path='/schedule' exact Component={Schedule} />
           <Route path='/race-results/:eventID' exact Component={RaceResults} />
-          
+          <Route path='/quiz' exact Component={QuizPage} />
           
           
 

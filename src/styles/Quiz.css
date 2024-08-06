@@ -1,0 +1,114 @@
+@font-face {
+    font-family: F1-black;
+    src: url(../fonts/Formula1-Black.ttf);
+}
+
+@font-face {
+    font-family: F1-bold;
+    src: url(../fonts/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: F1-regular;
+    src: url(../fonts/Formula1-Regular.ttf);
+}
+
+@font-face {
+    font-family: F1-wide;
+    src: url(../fonts/Formula1-Wide.ttf);
+}
+
+
+
+.quiz-container {
+    width: 100vw;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-questions {
+    width: 65%;
+    align-items: center;
+    align-self: center; 
+}
+
+.quiz-questions h1 {
+    font-family: F1-bold;
+    color: black;
+}
+
+.MuiFormControlLabel-root .MuiTypography-root {
+    font-family: F1-regular; /* Change 'Arial' to your preferred font */
+    font-size: 16px; /* Adjust the font size as needed */
+    color: black /* Change the text color if desired */
+  }
+
+  .correct .MuiFormControlLabel-label{ 
+    color: green !important;
+    font-family: F1-bold;
+}
+
+.wrong .MuiFormControlLabel-label {
+    color: red;
+}
+
+.no-answer .MuiFormControlLabel-label {
+    color: green;
+}
+
+
+.refresh-button {
+    font-family: F1-regular !important;
+    position: relative;
+    font-size: 30px;
+    width: auto;
+}
+
+.refresh-button-div {
+    padding-bottom: 20px;
+    width: auto;
+}
+
+.submit-button {
+    font-family: F1-regular !important;
+    position: relative;
+    font-size: 30px;
+    width: auto;
+}
+
+.submit-button-div {
+    padding-bottom: 10px;
+    width: auto;
+    padding-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.loading-header {
+    margin-top: 15%;
+    font-family: F1-wide;
+    text-align: center;
+
+}
+
+.score {
+    font-family: F1-bold;
+    font-size: 28px;
+    margin-top: 20px;
+    color: #ff4081;
+}
+
+.emoji {
+    width: 25px;
+    height: auto;
+    margin: 0;
+}
