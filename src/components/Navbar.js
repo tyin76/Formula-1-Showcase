@@ -47,15 +47,15 @@ function Navbar() {
 
             <li className='nav-item'>
                 <Link to='/schedule' className='nav-links' onClick={closeMobileMenu}>
-                    Schedule
+                    Schedule / Race Results
                 </Link>
             </li>
 
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
                 <Link to='/race-results' className='nav-links' onClick={closeMobileMenu}>
                     Race Results
                 </Link>
-            </li>
+            </li> */}
 
             
            

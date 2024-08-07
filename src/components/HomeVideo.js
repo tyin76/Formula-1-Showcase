@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/HomeVideo.css'
-import F1HomeVideo from '../videos/This is Formula One.mp4'
-import F1RainVideo from '../videos/This is Formula One _ Rain EditionTrimmed.mp4'
+import F1HomeVideo from '../videos/This is Formula One (1).mp4'
+import F1RainVideo from '../videos/This is Formula One _ Rain EditionTrimmed (1).mp4'
 import F1VisorVideo from '../videos/VisorVideoTrimmed.mp4'
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
