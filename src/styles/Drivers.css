@@ -1,9 +1,9 @@
 
-.driver-page-container {
+/* .driver-page-container {
   display: flex;
   justify-content: center;
   width: 100%;
-}
+} */
 
 .driver-gallery {
   display: flex;
@@ -11,9 +11,9 @@
   justify-content: space-evenly;
   width: 100%;
 }
-
+/* 
 .driver-gallery > * {
   flex: 1 0 22%;
   margin: 10px;
   box-sizing: border-box;
-}
+} */

@@ -84,7 +84,7 @@ import React from 'react'
         },
         {
             question: "Which Grand Prix is known as 'La Rascasse'?",
-            options: ["Monaco Grand Prix", "French Grand Prix", "Italian Grand Prix", "Spanish Grand Prix"],
+            options: ["Monaco Grand Prix 🇲🇨", "French Grand Prix 🇫🇷", "Italian Grand Prix 🇮🇹", "Spanish Grand Prix 🇪🇸"],
             answer: "Monaco Grand Prix"
         },
         {
@@ -99,7 +99,7 @@ import React from 'react'
         },
         {
             question: "In which country is the Interlagos circuit located?",
-            options: ["Argentina", "Brazil", "Mexico", "Portugal"],
+            options: ["Argentina 🇦🇷", "Brazil 🇧🇷", "Mexico 🇲🇽", "Portugal 🇵🇹"],
             answer: "Brazil"
         },
         {
@@ -435,7 +435,7 @@ import React from 'react'
         },
         {
             question: "Which Formula 1 race is known for its 'Ascari Chicane'?",
-            options: ["Monaco Grand Prix", "Italian Grand Prix", "Spanish Grand Prix", "British Grand Prix"],
+            options: ["Monaco Grand Prix 🇲🇨", "Italian Grand Prix 🇮🇹", "Spanish Grand Prix 🇪🇸", "British Grand Prix 🇬🇧"],
             answer: "Italian Grand Prix"
         },
         {
@@ -470,7 +470,7 @@ import React from 'react'
         },
         {
             question: "Which Formula 1 race is known for its 'Eau Rouge' corner?",
-            options: ["Belgian Grand Prix", "French Grand Prix", "Monaco Grand Prix", "Spanish Grand Prix"],
+            options: ["Belgian Grand Prix 🇧🇪", "French Grand Prix 🇫🇷", "Monaco Grand Prix 🇲🇨", "Spanish Grand Prix 🇪🇸"],
             answer: "Belgian Grand Prix"
         },
         {

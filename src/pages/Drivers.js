@@ -48,9 +48,6 @@ import zhouNum from '../images/zhou num.png'
 import bottasNum from '../images/bottas num.png'
 
 
-
-
-
 function Drivers() {
   return (
     <>

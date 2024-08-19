@@ -65,7 +65,8 @@ console.log(data)
               position: innerEntry.order ?? 'Unknown order',
               totalTime: innerEntry.stateInfo?.totalTime ?? 'Unknown Time',
               pitStops: innerEntry.stateInfo?.pitsTaken ?? 'Unknown Pits Taken',
-              lapsCompleted: innerEntry.stateInfo?.lapsCompleted ?? 'Unknown Laps Completed'
+              lapsCompleted: innerEntry.stateInfo?.lapsCompleted ?? 'Unknown Laps Completed',
+              completed: innerEntry.stateInfo?.completed ?? 'Unknown completed value'
             }))
           };
           raceEntries.push(raceData);
@@ -77,6 +78,7 @@ console.log(data)
     return (
     <>
     <div className='race-result-container'>
+      {showInfo && <h1 className='gp-header'>{data.report.racestrip.name}</h1>}
 
     <div className='race-nav'>
             <nav>
@@ -102,42 +104,78 @@ console.log(data)
     
     
       
-      {(displayedRaceInfo && !showInfo) && <div className='displayed-race-info'>
+      {(displayedRaceInfo && !showInfo) && <div className='displayed-race-info-positions-container'>
 
         
-          <h1>{displayedRaceInfo.raceType}</h1>
-          <h1>{displayedRaceInfo.drivers[0].name}</h1>
+          <h1 className='race-type-header'>{displayedRaceInfo.raceType}</h1>
+          <h1 className='finishing-positions-header'>Finishing Positions</h1>
+          
+          <div className='positions-container'>
+          
+          
+          
+          
+          {console.log(displayedRaceInfo)}
+
+
+
+
+          </div>
+        
+          
+        
+      </div>}
+
+      
+
         
 
-
-
-      </div> }
-
+      {showInfo && <div className='info-container'>
+        
 
       {showInfo && <div className='location-info'>
-        <h3> City: {data.report.eventInfo.venue.address.city}</h3>
-        <h3> Country: {data.report.eventInfo.venue.address.country}</h3>
-        <h3> {data.report.racestrip.name}</h3>
+        <h3><span>City:</span> {data.report.eventInfo.venue.address.city}</h3>
+        <h3><span>Country:</span> {data.report.eventInfo.venue.address.country}</h3>
+        {/* <h3> {data.report.racestrip.name}</h3> */}
         <img className='country-flag' src={data.report.eventInfo.venue.countryFlag.href}></img>
-        <h3> Race Day: {endDate} </h3>
-        <h3> Start Time: {time} UTC</h3>
+        <h3><span>Race Day:</span> {endDate} </h3>
+        <h3><span>Start Time:</span> {time} UTC</h3>
       </div> }
+
+      <div className='circuit-info-img'>
+      <img src={data.report.eventInfo.venue.circuit.diagrams[2].href} className='circuit-info-img'></img>
+      {(data.report?.eventInfo?.venue?.circuit?.fastestLapDriver && showInfo) &&
+          <h3><span>Fastest Lap Time Record:</span> {data.report.eventInfo.venue.circuit.fastestLapDriver.fastestLapTime} &nbsp;
+          ({data.report.eventInfo.venue.circuit.fastestLapDriver.fastestLapYear})</h3>}
+          
+          {(data.report?.eventInfo?.venue?.circuit?.fastestLapDriver && showInfo) &&
+          <div className='record-holder'>
+           <h3><span>Record Holder:</span> {data.report.eventInfo.venue.circuit.fastestLapDriver.fullName}</h3>
+           <img src={data.report.eventInfo.venue.circuit.fastestLapDriver.flag.href} className='record-holder-img'></img>
+          </div>}
+      </div>
 
       {showInfo && <div className='circuit-info'>
-          <img src={data.report.eventInfo.venue.circuit.diagrams[2].href} className='circuit-info-img'></img>
-          <h3>Direction: {data.report.eventInfo.venue.circuit.direction}</h3>
-          <h3>Lap Length: {data.report.eventInfo.venue.circuit.length}</h3>
-          <h3># of Turns: {data.report.eventInfo.venue.circuit.turns}</h3>
-          <h3>Established: {data.report.eventInfo.venue.circuit.established}</h3>
-          <h3>Circuit Name: {data.report.eventInfo.venue.circuit.fullName}</h3>
-          <h3># of Laps: {data.report.eventInfo.venue.circuit.laps}</h3>
-          <h3>Race Type: {data.report.eventInfo.venue.circuit.type}</h3>
+          
+          <h3><span>Circuit Name:</span> {data.report.eventInfo.venue.circuit.fullName}</h3>
+          <h3><span>Lap Length:</span> {data.report.eventInfo.venue.circuit.length}</h3>
+          <h3><span>Race Type:</span> {data.report.eventInfo.venue.circuit.type}</h3>
+          <h3><span>Established:</span> {data.report.eventInfo.venue.circuit.established}</h3>
+          <h3><span>Direction:</span> {data.report.eventInfo.venue.circuit.direction}</h3>
+          <h3><span># of Laps:</span> {data.report.eventInfo.venue.circuit.laps}</h3>
+          <h3><span># of Turns:</span> {data.report.eventInfo.venue.circuit.turns}</h3> 
+          
+
+        
+        
 
       
       </div> }
 
       
-      {(data.report?.eventInfo?.venue?.circuit?.fastestLapDriver && showInfo) && 
+
+      
+      {/* {(data.report?.eventInfo?.venue?.circuit?.fastestLapDriver && showInfo) && 
       <div className='fastest-info'>
         <h3>Fastest Lap Time Record: {data.report.eventInfo.venue.circuit.fastestLapDriver.fastestLapTime} &nbsp;
         ({data.report.eventInfo.venue.circuit.fastestLapDriver.fastestLapYear})</h3>
@@ -149,10 +187,10 @@ console.log(data)
         
 
 
+      </div>} */}
+
+
       </div>}
-
-
-
 
 
 </div>

@@ -22,9 +22,9 @@
 
 .race-result-container {
     display: flex;
-    width: 100vw;
-    height: auto;
-    
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
 }
 
 .location-info {
@@ -34,6 +34,10 @@
     flex-direction: column;
     align-items: left;
     font-family: F1-regular;
+    /* border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 4%;
+    padding-left: 10px; */
     
 
     img {
@@ -50,10 +54,26 @@
 .circuit-info {
     font-family: F1-regular;
     text-align: center;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 4%; */
+}
+
+.circuit-info h3 {
+    padding: 20px;
+    margin: 0;
 }
 
 .circuit-info-img {
-    width: 400px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: F1-regular;
 }
 
 .loading-header {
@@ -70,8 +90,12 @@
 
 .record-holder {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    
+    justify-content: center;
+    margin-top: -17px;
+    width: auto;
+    height: auto;
 }
 
 .record-holder-img {
@@ -88,7 +112,7 @@
 
 
 .race-nav {
-    width: 200px; /* Adjust width as needed */
+    width: auto; /* Adjust width as needed */
     height: auto;
     background-color: #f0f0f0;
     padding: 20px 0;
@@ -97,14 +121,13 @@
     flex-direction: column;
     justify-content: center; /* Center items vertically */
     align-items: center; /* Center items horizontally */
+    align-self: flex-start;
   }
 
   .race-nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-    
   }
   
   .race-nav li {
@@ -128,3 +151,50 @@
   .race-nav-inner {
     width: 100%;
   }
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.gp-header {
+    position: absolute;
+    text-align: center;
+    font-family: F1-bold;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+
+.race-result-container span {
+    font-family: F1-bold;
+}
+
+.displayed-race-info-positions-container {
+    width: 100%;
+}
+
+.race-type-header {
+    text-align: center;
+    font-family: F1-wide;
+    color: rgb(194, 52, 52);
+    text-shadow: 10px 5px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.finishing-positions-header {
+    font-family: F1-bold;
+    font-size: 30px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+
+

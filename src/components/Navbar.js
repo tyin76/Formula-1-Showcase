@@ -47,7 +47,7 @@ function Navbar() {
 
             <li className='nav-item'>
                 <Link to='/schedule' className='nav-links' onClick={closeMobileMenu}>
-                    Schedule / Race Results
+                    Schedule / Results
                 </Link>
             </li>
 
