@@ -258,10 +258,6 @@ console.log(data)
     }
 
   }
-
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
   
   function handleNavChange(entry, index) {
       setNavIndex(index);
