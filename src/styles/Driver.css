@@ -42,6 +42,10 @@
     backface-visibility: hidden;
 }
 
+.team-logo {
+    cursor: default;
+}
+
 
 .back-card {
     width: 100%; 
@@ -119,7 +123,8 @@
     width: 70px;
     position: absolute;
     margin-top: 10px;
-    margin-left: -12px;    
+    margin-left: -12px;
+    cursor: default;   
 }
 
 .driver-name {

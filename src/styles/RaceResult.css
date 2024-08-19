@@ -167,6 +167,7 @@
     font-family: F1-bold;
     border-bottom: 2px solid black;
     padding: 5px;
+    text-shadow: 10px 5px 7px rgba(0, 0, 0, 0.4);
 }
 
 .race-result-container span {
@@ -196,5 +197,27 @@
 
 }
 
+.positions-container {
+    
+}
 
+.row-flag {
+    width: 30px;
+    border-radius: 20%;
+}
+
+.winner-position {
+    color: gold !important;
+    font-family: F1-bold !important;
+}
+
+.second-place {
+    color: silver !important;
+    font-family: F1-bold !important;
+}
+
+.third-place {
+    color: rgb(205, 127, 50) !important;
+    font-family: F1-bold !important;
+}
 

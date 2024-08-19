@@ -3,6 +3,15 @@ import { useLocation, useParams } from 'react-router-dom'
 import { useEffect } from 'react';
 import '../styles/RaceResult.css'
 
+// material ui imports
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 
 function RaceResult() {
   const { eventID } = useParams();
@@ -15,9 +24,6 @@ function RaceResult() {
   const [showInfo, setShowInfo] = useState(true)
 
   const raceEntries=[];
-
-  
-  
 
   console.log(eventID);
 
@@ -63,10 +69,11 @@ console.log(data)
               flag: innerEntry.athleteInfo?.flag?.href ?? 'Unknown Flag',
               headshot: innerEntry.athleteInfo?.headshot?.href ?? 'Unknown headshot',
               position: innerEntry.order ?? 'Unknown order',
-              totalTime: innerEntry.stateInfo?.totalTime ?? 'Unknown Time',
-              pitStops: innerEntry.stateInfo?.pitsTaken ?? 'Unknown Pits Taken',
+              totalTime: innerEntry.stateInfo?.totalTime ?? 'No Time Set',
+              pitStops: innerEntry.stateInfo?.pitsTaken ?? '0',
               lapsCompleted: innerEntry.stateInfo?.lapsCompleted ?? 'Unknown Laps Completed',
-              completed: innerEntry.stateInfo?.completed ?? 'Unknown completed value'
+              completed: innerEntry.stateInfo?.completed ?? 'Unknown completed value',
+              behindTime: innerEntry.stateInfo?.behindTime ?? innerEntry.stateInfo.totalTime
             }))
           };
           raceEntries.push(raceData);
@@ -112,15 +119,59 @@ console.log(data)
           
           <div className='positions-container'>
           
+          <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow sx={{
+            '& td, & th': {
+                fontFamily: 'F1-bold',
+                fontSize: '20px'
+              }
+              }}>
+            <TableCell align="center" width="16%">Position</TableCell>
+            <TableCell align="center" width="16%">Driver</TableCell>
+            <TableCell align="center" width="16%">Team</TableCell>
+            <TableCell align="center" width="16%">Time &nbsp;(hr/min/s/ms)</TableCell>
+            <TableCell align="center" width="16%">Nation</TableCell>
+            <TableCell align="center" width="16%">Pitstops</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {displayedRaceInfo.drivers.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } ,
+              '& td, & th': {
+                fontFamily: 'F1-regular'
+              }
+            }}
+            >
+              <TableCell component="th" scope="row" align='center' width="16%" 
+              className={row.position === 1 ? 'winner-position' : row.position === 2 ? 'second-place' : row.position === 3 ? 'third-place' : ''}>
+                {row.position}
+              </TableCell>
+              <TableCell align="center" width="16%">{row.name}</TableCell>
+              <TableCell align="center" width="16%">{row.team}</TableCell>
+              <TableCell align="center" width="16%">{displayedRaceInfo.raceType === "Qualifying" && row.position === 1 ? row.totalTime : displayedRaceInfo.raceType === "Sprint Shootout" ? row.totalTime : row.position === 1 ? row.totalTime :
+                                                    !row.completed ? "DNF" :
+                                                    row.behindTime || row.totalTime}</TableCell>
+              <TableCell align="center" width="16%"><img src={row.flag} className='row-flag'></img></TableCell>
+              <TableCell align="center" width="16%">{row.pitStops}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
           
           
           
-          {console.log(displayedRaceInfo)}
+          
+  {console.log(displayedRaceInfo)}
 
 
 
 
-          </div>
+      </div>
         
           
         
@@ -208,6 +259,10 @@ console.log(data)
 
   }
 
+  function createData(name, calories, fat, carbs, protein) {
+    return { name, calories, fat, carbs, protein };
+  }
+  
   function handleNavChange(entry, index) {
       setNavIndex(index);
       setShowInfo(false);
