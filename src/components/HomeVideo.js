@@ -38,7 +38,7 @@ function HomeVideo() {
 
   return (
     <div className='home-container'>
-    <video src={videos[currentVideoIndex]} autoPlay loop={false} muted={muted} onEnded={handleVideoEnded}></video>
+    <video src={videos[currentVideoIndex]} autoPlay loop={false} muted={muted} onEnded={handleVideoEnded} preload='auto'></video>
 
     <h1 className="title-header">FORMULA 1</h1>
 
