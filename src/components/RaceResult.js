@@ -85,7 +85,7 @@ console.log(data)
     return (
     <>
     <div className='race-result-container'>
-      {showInfo && <h1 className='gp-header'>{data.report.racestrip.name}</h1>}
+      {/* {showInfo && <h1 className='gp-header'>{data.report.racestrip.name}</h1>} */}
 
     <div className='race-nav'>
             <nav>
@@ -182,7 +182,7 @@ console.log(data)
         
 
       {showInfo && <div className='info-container'>
-        
+      {showInfo && <h1 className='gp-header'>{data.report.racestrip.name}</h1>}
 
       {showInfo && <div className='location-info'>
         <h3><span>City:</span> {data.report.eventInfo.venue.address.city}</h3>

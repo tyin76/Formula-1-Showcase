@@ -78,15 +78,12 @@
 
 .race-info-btn {
     width: auto;
-    position: relative;
-    text-align: center;
-    align-self: center;
-    justify-content: center;
-    font-family: F1-regular !important;
-    color: yellow !important;
+    position: absolute;
+    right: 1%;
+    top: 3.8%;
+    font-family: F1-bold !important;
+    color: black !important;
     transition: 0.5s ease;
-    margin-top: -20px;
-    font-size: 20px !important;
 }
 
 .race-info-btn:hover {
