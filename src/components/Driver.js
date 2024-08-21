@@ -37,107 +37,107 @@ function Driver({driverId, driverBorder, flag, logo, raceNumber}) {
     
     switch (driverId) {
         case 4665:
-            console.log("MAX")
+            //console.log("MAX")
             driverIMG = Max
             name ="Max Verstappen"
             break;
         case 5579: 
-            console.log("LANDO")
+            //console.log("LANDO")
             driverIMG = Lando
             name ="Lando Norris"
             break;
         case 5498:
-            console.log("LECLERC")
+            //console.log("LECLERC")
             driverIMG = Leclerc
             name ="Charles Leclerc"
             break;
         case 4686:
-            console.log("SAINZ")
+            //console.log("SAINZ")
             driverIMG = Sainz
             name = "Carlos Sainz"
             break;
         case 5752:
-            console.log("PIASTRI")
+            //console.log("PIASTRI")
             driverIMG = Piastri
             name = "Oscar Piastri"
             break;
         case 4472: 
-            console.log("PEREZ")
+            //console.log("PEREZ")
             driverIMG = Perez
             name = "Sergio Pérez"
             break;
         case 5503:
-            console.log("RUSSEL")
+            //console.log("RUSSEL")
             driverIMG = Russel
             name = "George Russell"
             break;
         case 868:
-            console.log("HAMILTON")
+            //console.log("HAMILTON")
             driverIMG = Hamilton
             name = "Lewis Hamilton"
             break;
         case 348:
-            console.log("ALONSO")
+            //console.log("ALONSO")
             driverIMG = Alonso
             name = "Fernando Alonso"
             break;
         case 4775:
-            console.log("STROLL")
+            //console.log("STROLL")
             driverIMG = Stroll
             name = "Lance Stroll"
             break;
         case 4396:
-            console.log("HULK")
+            //console.log("HULK")
             driverIMG = Hulk
             name = "Nico Hülkenberg"
             break;
         case 5652:
-            console.log("YUKI")
+            //console.log("YUKI")
             driverIMG = Yuki
             name = "Yuki Tsunoda"
             break;
         case 4510:
-            console.log("RIC")
+            //console.log("RIC")
             driverIMG = Ric
             name = "Daniel Ricciardo"
             break;
         case 5789:
-            console.log("Bearman")
+            //console.log("Bearman")
             driverIMG = Bearman
             name = "Oliver Bearman"
             break;
         case 5501:
-            console.log("GASLY")
+            //console.log("GASLY")
             driverIMG = Gasly
             name = "Pierre Gasly"
             break;
         case 4623:
-            console.log("K-MAG")
+            //console.log("K-MAG")
             driverIMG = Mag
             name = "Kevin Magnussen"
             break;
         case 5592:
-            console.log("ALBON")
+            //console.log("ALBON")
             driverIMG = Albon
             name = "Alex Albon"
             break;
         case 4678:
-            console.log("OCON")
+            //console.log("OCON")
             driverIMG = Ocon
             name = "Esteban Ocon"
             break;
         case 5682:
-            console.log("ZHOU")
+            //console.log("ZHOU")
             driverIMG = Zhou
             name = "Zhou Guanyu"
             break;
         case 5745:
-            console.log("SARGEANT")
+            //console.log("SARGEANT")
             driverIMG = Sargeant
             name = "Logan Sargeant"
             break;
         case 4520:
-            console.log("BOTTAS")
+            //console.log("BOTTAS")
             driverIMG = Bottas
             name = "Valtteri Bottas"
             break;
@@ -187,7 +187,7 @@ function Driver({driverId, driverBorder, flag, logo, raceNumber}) {
         getAPI();
     }, [])
 
-console.log(data)
+// console.log(data)
 
     function calculateDriverStats(whichStat) {
         var stat = 0;

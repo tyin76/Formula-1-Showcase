@@ -25,7 +25,7 @@ function RaceResult() {
 
   const raceEntries=[];
 
-  console.log(eventID);
+  //console.log(eventID);
 
   const url = `https://f1-motorsport-data.p.rapidapi.com/race-report?eventId=${eventID}`;
   const options = {
@@ -51,7 +51,7 @@ function RaceResult() {
     getAPI();
 }, [])
 
-console.log(data)
+//console.log(data)
 
     function StyleRaceInfo() {
       if (data) {
@@ -79,9 +79,9 @@ console.log(data)
           raceEntries.push(raceData);
         });
 
-        console.log(raceEntries)
+        //console.log(raceEntries)
 
-        console.log(positions)
+        //console.log(positions)
     return (
     <>
     <div className='race-result-container'>
@@ -166,7 +166,7 @@ console.log(data)
           
           
           
-  {console.log(displayedRaceInfo)}
+  {/* {console.log(displayedRaceInfo)} */}
 
 
 

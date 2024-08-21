@@ -10,9 +10,9 @@ function DriverStats() {
     const { driverId } = useParams();
     const  location = useLocation();
     const { driverName, driverImg , Flag, Logo, DriverBorder, raceNumber} = location.state || {}
-    console.log(driverId)
-    console.log(driverName)
-    console.log(driverImg)
+    // console.log(driverId)
+    // console.log(driverName)
+    // console.log(driverImg)
     
 
 
@@ -60,7 +60,7 @@ function DriverStats() {
 //      getAPI();
 // }, [])
 
-console.log(data)
+//console.log(data)
 
 function calculateDriverStats(whichStat) {
     var stat = 0;

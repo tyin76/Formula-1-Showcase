@@ -87,9 +87,9 @@ function Schedule() {
                     }
 
                     // temp arrays
-                    console.log(startDates) 
-                    console.log(notFinishedStartDates)
-                    console.log(otherInfoTempArray)
+                    // console.log(startDates) 
+                    // console.log(notFinishedStartDates)
+                    // console.log(otherInfoTempArray)
 
                     
 
@@ -132,12 +132,12 @@ function Schedule() {
     }, [year])
 
     // console logging state variables
-    console.log(raceDays)
-    console.log(notFinishedRaceDays)
-    console.log(otherInfo)
+    // console.log(raceDays)
+    // console.log(notFinishedRaceDays)
+    // console.log(otherInfo)
 
-    console.log(raceDays.length)
-    console.log(notFinishedRaceDays.length)
+    // console.log(raceDays.length)
+    // console.log(notFinishedRaceDays.length)
 
     
 

@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 
 function Quiz() {
   
-  console.log(quizQuestions)
+  //console.log(quizQuestions)
 
   const [questions, setQuestions] = useState([]) 
   const [answers, setAnswers] = useState([])
@@ -75,10 +75,10 @@ function Quiz() {
       
   }
 
-  console.log(questions)
-  console.log(answers)
-  console.log(userAnswers);
-  console.log(emojis)
+  // console.log(questions)
+  // console.log(answers)
+  // console.log(userAnswers);
+  // console.log(emojis)
 
 
 
