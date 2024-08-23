@@ -69,3 +69,13 @@
     font-size: 4vw;
     text-shadow: 13px 10px 6px rgba(0, 0, 0, 0.4);
 }
+
+.video-count-header {
+    font-family: F1-regular;
+    color: rgb(161, 33, 33);;
+    position: absolute;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    left: 1%;
+    top: 12%;
+    margin: 0;
+}

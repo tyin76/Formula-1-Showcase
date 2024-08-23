@@ -85,7 +85,7 @@ import React from 'react'
         {
             question: "Which Grand Prix is known as 'La Rascasse'?",
             options: ["Monaco Grand Prix 🇲🇨", "French Grand Prix 🇫🇷", "Italian Grand Prix 🇮🇹", "Spanish Grand Prix 🇪🇸"],
-            answer: "Monaco Grand Prix"
+            answer: "Monaco Grand Prix 🇲🇨"
         },
         {
             question: "What is the shortest circuit on the current Formula 1 calendar?",
@@ -100,7 +100,7 @@ import React from 'react'
         {
             question: "In which country is the Interlagos circuit located?",
             options: ["Argentina 🇦🇷", "Brazil 🇧🇷", "Mexico 🇲🇽", "Portugal 🇵🇹"],
-            answer: "Brazil"
+            answer: "Brazil 🇧🇷"
         },
         {
             question: "What does DRS stand for in Formula 1?",
@@ -436,7 +436,7 @@ import React from 'react'
         {
             question: "Which Formula 1 race is known for its 'Ascari Chicane'?",
             options: ["Monaco Grand Prix 🇲🇨", "Italian Grand Prix 🇮🇹", "Spanish Grand Prix 🇪🇸", "British Grand Prix 🇬🇧"],
-            answer: "Italian Grand Prix"
+            answer: "Italian Grand Prix 🇮🇹"
         },
         {
             question: "Which driver won the 2020 Formula 1 World Championship?",
@@ -471,7 +471,7 @@ import React from 'react'
         {
             question: "Which Formula 1 race is known for its 'Eau Rouge' corner?",
             options: ["Belgian Grand Prix 🇧🇪", "French Grand Prix 🇫🇷", "Monaco Grand Prix 🇲🇨", "Spanish Grand Prix 🇪🇸"],
-            answer: "Belgian Grand Prix"
+            answer: "Belgian Grand Prix 🇧🇪"
         },
         {
             question: "Who is the youngest driver to win a Formula 1 race?",
