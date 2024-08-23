@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import '../styles/HomeVideo.css'
-import F1HomeVideo from '../videos/This is Formula One (1).mp4'
-import F1RainVideo from '../videos/This is Formula One _ Rain EditionTrimmed (1).mp4'
-import F1VisorVideo from '../videos/VisorVideoTrimmed.mp4'
+// import F1HomeVideo from '../videos/This is Formula One (1).mp4'
+// import F1RainVideo from '../videos/This is Formula One _ Rain EditionTrimmed (1).mp4'
+// import F1VisorVideo from '../videos/VisorVideoTrimmed.mp4'
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
 
@@ -25,6 +25,7 @@ const importVideo = (index) => {
 function HomeVideo() {
   const [muted, setMuted] = useState(true);
   const [currentVideo, setCurrentVideo] = useState(null);
+  const [videoCount, setVideoCount] = useState(1);
 
   useEffect(() => {
     const loadInitialVideo = async () => {
@@ -52,6 +53,7 @@ function HomeVideo() {
     const nextIndex = (getCurrentVideoIndex() + 1) % 3;
     const module = await importVideo(nextIndex);
     setCurrentVideo(module.default);
+    setVideoCount(nextIndex + 1);
   };
 
   const getCurrentVideoIndex = () => {
@@ -74,7 +76,7 @@ function HomeVideo() {
         />
       )}
       <h1 className="title-header">FORMULA 1</h1>
-      {currentVideo && <h3 className='video-count-header'>Video: {getCurrentVideoIndex() + 1} of 3</h3>}
+      {currentVideo && <h3 className='video-count-header'>Video: {videoCount} of 3</h3>}
       <Button className='mute-button' onClick={handleMute} variant='text'>
         {muted ? <i className="fa-solid fa-volume-high"> UNMUTE</i> : <i className="fa-solid fa-volume-xmark"> MUTE</i>}
       </Button>
