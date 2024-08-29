@@ -3,6 +3,8 @@ import '../styles/HomeVideo.css'
 import F1HomeVideo from '../videos/This is Formula One (1).mp4'
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
+import poster from '../images/poster mclaren.avif'
+import ferrariPoster from '../images/poster ferrari.avif'
 
 
 function HomeVideo() {
@@ -24,7 +26,7 @@ function HomeVideo() {
 
   return (
     <div className='home-container'>
-    <video src={F1HomeVideo} autoPlay loop muted={muted} preload="auto"></video>
+    <video src={F1HomeVideo} autoPlay loop muted={muted} preload="auto" poster={ferrariPoster}></video>
 
     <h1 className="title-header">FORMULA 1</h1>
 
