@@ -21,6 +21,7 @@ import Ocon from '../images/ocon.png'
 import Zhou from '../images/zhou.png'
 import Sargeant from '../images/sargeant.png'
 import Bottas from '../images/Bottas.png'
+import Colapinto from '../images/colapinto.avif'
 
 import DutchFlag from '../images/dutch flag.avif'
 import UKFlag from '../images/uk flag.avif'
@@ -37,6 +38,7 @@ import ThaiFlag from '../images/thai flag.avif'
 import ChinaFlag from '../images/china flag.avif'
 import USAFlag from '../images/usa flag.avif'
 import FinlandFlag from '../images/finland flag.avif'
+import ArgentinaFlag from '../images/argentina flag.avif'
 
 import RedBullLogo from '../images/red bull logo.png'
 import mclaren from '../images/McLaren Logo.png'
@@ -76,7 +78,8 @@ function Ranking() {
         "Esteban Ocon" : Ocon,
         "Zhou Guanyu" : Zhou,
         "Logan Sargeant" : Sargeant,
-        "Valtteri Bottas" : Bottas  
+        "Valtteri Bottas" : Bottas,
+        "Franco Colapinto" : Colapinto
 }
 
     const driverTeams  = {
@@ -99,7 +102,8 @@ function Ranking() {
         "Esteban Ocon" : "alpine",
         "Zhou Guanyu" : "kick",
         "Logan Sargeant" : "williams",
-        "Valtteri Bottas" : "kick" 
+        "Valtteri Bottas" : "kick",
+        'Franco Colapinto' : 'williams'
 
     }
 
@@ -123,7 +127,8 @@ function Ranking() {
         "Esteban Ocon" : FranceFlag,
         "Zhou Guanyu" : ChinaFlag,
         "Logan Sargeant" : USAFlag,
-        "Valtteri Bottas" : FinlandFlag
+        "Valtteri Bottas" : FinlandFlag,
+        'Franco Colapinto' : ArgentinaFlag
     }
 
     const teamLogos = {
@@ -146,7 +151,8 @@ function Ranking() {
         "Esteban Ocon" : alpine,
         "Zhou Guanyu" : kick,
         "Logan Sargeant" : williams,
-        "Valtteri Bottas" : kick
+        "Valtteri Bottas" : kick,
+        "Franco Colapinto" : williams
     }
 
     const url = 'https://f1-motorsport-data.p.rapidapi.com/standings-drivers?year=2024';
