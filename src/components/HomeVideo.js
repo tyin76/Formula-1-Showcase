@@ -8,7 +8,8 @@ import ferrariPoster from '../images/poster ferrari.avif'
 
 
 function HomeVideo() {
-    const [muted, setMuted] = useState(true)
+    const [muted, setMuted] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     
 
@@ -24,9 +25,13 @@ function HomeVideo() {
         setMuted(!muted);
     }
 
+    function handleVideoPlay() {
+      setLoading(!loading);
+    }
+
   return (
-    <div className='home-container'>
-    <video src={F1HomeVideo} autoPlay loop muted={muted} preload="auto"></video>
+    <div className={`home-container ${loading ? 'loading' : ''}`}>
+    <video src={F1HomeVideo} autoPlay loop muted={muted} preload="auto" onPlay={handleVideoPlay}></video>
 
     <h1 className="title-header">FORMULA 1</h1>
 
