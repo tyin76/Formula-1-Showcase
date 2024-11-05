@@ -25,69 +25,67 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-    transition: background-color 0.3s ease;
-  }
-
-.mute-button {
-    position:relative;
-    left: 46.2%;
-    bottom: 47.5%;
-
-    
-}
-  
-.home-container video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    position: absolute;
-    
-  }
-
- .home-container.loading video {
-    opacity: 0; 
-    background-color: black;
-}
-
-
-.home-container:not(.loading) video {
-    opacity: 1; /* Show video when it's ready */
-    transition: opacity 0.3s ease; /* Smooth fade-in */
-}
-
-  html.home-page, body.home-page {
-    margin: 0;
-    height: 100%;
+    position: relative;
+    background-color: black; /* Set default background to black */
     overflow: hidden;
 }
 
-
-.home-container > .title-header {
+.video-background {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
+    height: 100%;
+    background-color: black;
+    z-index: 0;
 }
+
+.home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.home-video.hidden {
+    opacity: 0;
+}
+
+.home-container.loading .home-video {
+    opacity: 0;
+}
+
+.mute-button {
+    position: relative;
+    left: 46.2%;
+    bottom: 15.5%;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
 .title-header {
     font-family: F1-wide;
     color: rgb(161, 33, 33);
-    position: absolute;
-    top: 15%;
-    left: 52%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 2;
     font-size: 4vw;
     text-shadow: 13px 10px 6px rgba(0, 0, 0, 0.4);
+    margin-top: -39%;
 }
 
-.video-count-header {
-    font-family: F1-regular;
-    color: rgb(161, 33, 33);;
-    position: absolute;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
-    left: 1%;
-    top: 12%;
+html.home-page,
+body.home-page {
     margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
 }
