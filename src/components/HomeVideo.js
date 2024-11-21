@@ -57,6 +57,7 @@ const HomeVideo = () => {
       <Button 
         className="mute-button" 
         onClick={handleMute}
+        size='large'
       >
         {muted ? (
           <i className="fa-solid fa-volume-high"> UNMUTE</i>
