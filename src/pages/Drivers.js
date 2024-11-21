@@ -52,6 +52,7 @@ function Drivers() {
   return (
     <>
     <div className="driver-page-container">
+      <b style={{ fontFamily: 'F1-Regular', padding: '10px'}}>**Click each driver card to turn it over and see their stats!</b>
       <div className='driver-gallery'>
         <Driver driverId={4665} driverBorder='red-bull' flag={DutchFlag} logo={RedBullLogo} raceNumber={maxNumber}></Driver>
         <Driver driverId={4472} driverBorder='red-bull' flag={MexicoFlag} logo={RedBullLogo} raceNumber={perezNum}></Driver>
