@@ -205,7 +205,7 @@ function Schedule() {
         <Link to={`/race-results/${raceInfo.evLink}`} className='race-info-btn'
         state={{endDate: raceInfo.endDate, time: raceInfo.time}}>
         <Button variant='contained' className='race-info-btn'
-            sx={{ backgroundColor: 'grey'}}>Click Me</Button>
+            sx={{ backgroundColor: 'grey'}}>Click For More Info</Button>
         </Link>
 
         </div>

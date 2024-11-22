@@ -78,12 +78,11 @@
 
 .race-info-btn {
     width: auto;
-    position: absolute;
-    right: 1%;
-    top: 3.8%;
+    position: relative;
     font-family: F1-bold !important;
-    color: black !important;
+    color: white !important;
     transition: 0.5s ease;
+    padding-bottom: 15px;
 }
 
 .race-info-btn:hover {
